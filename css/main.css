@@ -1,0 +1,304 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*
+
+animation-name: declares the name of the @keyframes at-rule to manipulate.
+
+animation-duration: the length of time it takes for an animation to complete one cycle.
+
+animation-timing-function: establishes preset acceleration curves such as ease or linear.
+
+animation-delay: the time between the element being loaded and the start of the animation sequence.
+
+animation-direction: sets the direction of the animation after the cycle. Its default resets on each cycle.
+
+animation-iteration-count: the number of times the animation should be performed.
+
+animation-fill-mode: sets which values are applied before/after the animation.
+
+For example, you can set the last state of the animation to remain on screen, or you can set it to switch back to 
+before when the animation began.
+
+animation-play-state: pause/play the animation.
+
+*/
+
+/*
+
+.element {
+  animation-name: stretch;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; 
+}
+
+*/
+
+/*
+
+animation-timing-function	ease, ease-out, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) (e.g. cubic-bezier(0.5, 0.2, 0.3, 1.0))
+animation-duration	Xs or Xms
+animation-delay	Xs or Xms
+animation-iteration-count	X
+animation-fill-mode	forwards, backwards, both, none
+animation-direction	normal, alternate
+animation-play-state	paused, running
+
+*/
+
+/*
+
+.element {
+  -webkit-animation: KEYFRAME-NAME 5s infinite;
+  -moz-animation:    KEYFRAME-NAME 5s infinite;
+  -o-animation:      KEYFRAME-NAME 5s infinite;
+  animation:         KEYFRAME-NAME 5s infinite;
+}
+
+@-webkit-keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes KEYFRAME-NAME {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+*/
+
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color:  transparent;
+	margin: 0;
+	padding: 45px;
+	height: 100%;
+	animation: pulse 5s infinite ease-in-out alternate;
+}  
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+
+  25% {
+  	background-color: green;
+  }
+
+  50% {
+	background-color: aqua;
+  }
+
+  75% {
+  	background-color: brown;
+  }
+
+  100% {
+    background-color: #FF4136;
+  }
+}
+
+.jumbotron {
+	background-color: transparent;
+}
+
+.animation1 {
+	width: 200px;
+	display: inline-block;
+	height: 200px;
+	background-color: coral;
+	/*animation: square-to-circle 2s 1s infinite cubic-bezier(1,.015,.295,1.225) alternate;
+	outline: 1px solid transparent;*/
+}
+
+.animation2 {
+	width: 200px;
+	height: 200px;
+	margin-left: 100px;
+	display: inline-block;
+	background: coral;
+	outline: 1px solid transparent;
+	animation: square-to-circle2 3s 1s infinite cubic-bezier(1.000, 0.145, 0.000, 0.510) alternate;
+	position: absolute;
+
+}
+
+.animation1:hover {
+	animation: square-to-circle 2s forwards cubic-bezier(1,.015,.295,1.225) alternate;
+	outline: 1px solid transparent;	
+	/*animation-fill-mode: forwards;*/
+}
+
+
+.figure1 {
+	width: 100px;
+	height: 100px;
+	background: #fff;
+	animation: square-to-circle2 3s 1s infinite cubic-bezier(1.000, 0.145, 0.000, 0.510) alternate;
+}
+
+.figure2 {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	animation: shevaFall 3s infinite;
+
+}
+
+@-webkit-keyframes shevaRotate {
+	0%	{ 
+		transform: rotate(0deg);
+	}
+	100% { 
+		transform: rotate(360deg);
+	}
+}
+@-moz-keyframes shevaRotate {
+	0%	{ 
+		transform: rotate(0deg);
+	}
+	100% { 
+		transform: rotate(360deg);
+	}
+}
+@keyframes shevaRotate {
+	0%	{ 
+		transform: rotate(0deg);
+	}
+	100% { 
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes shevaFall {
+	0%	{ 
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1);	
+	}
+}
+@-moz-keyframes shevaFall {
+	0%	{ 
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1);	
+	}
+}
+@keyframes shevaFall {
+	0%	{ 
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1);	
+	}
+}
+
+
+@keyframes square-to-circle {
+	0% {
+		border-radius: 0 0 0 0;
+		/*background-color: coral; */
+		transform: rotate(0deg);
+	}
+	/*25% {
+		border-radius: 50% 0 0 0;
+		background: darksalmon; 
+		transform: rotate(45deg);
+	}
+	50% {
+		border-radius: 50% 50% 0 0;
+		background: indianred;
+		transform: rotate(90deg);
+	}
+	75% {
+		border-radius: 50% 50% 50% 0;
+		background: lightcoral;
+		transform: rotate(135deg);
+	}*/
+	100% {
+		border-radius: 50%;
+		/*background: darksalmon;*/
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes square-to-circle2 {
+	0% {
+		border-radius: 0 0 0 0;
+		background-color: coral; 
+		transform: rotate(0deg);
+	}
+	25% {
+		border-radius: 50% 0 0 0;
+		background: darksalmon; 
+		transform: rotate(45deg);
+	}
+	50% {
+		border-radius: 50% 50% 0 0;
+		background: indianred;
+		transform: rotate(90deg);
+	}
+	75% {
+		border-radius: 50% 50% 50% 0;
+		background: lightcoral;
+		transform: rotate(135deg);
+	}
+	100% {
+		border-radius: 50%;
+		background: darksalmon;
+		transform: rotate(180deg);
+	}
+}
+
+
+.player {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
