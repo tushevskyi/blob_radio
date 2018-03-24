@@ -76,7 +76,7 @@ const info = document.getElementById('info');
 
 function onYouTubePlayerAPIReady() {
 	const player = new YT.Player('player', {
-    	videoId: '8XiqrERZo_8', // this is the id of the video at youtube (the stuff after "?v=") 
+    	videoId: 'WI4-HUn8dFc', // this is the id of the video at youtube (the stuff after "?v=") 
     	events: {
         	onReady: function (e) {
             	console.log('video is loaded');
