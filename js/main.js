@@ -34,8 +34,8 @@ $(function() {
 
 			$body
 				.css({
-					'background':'url(' + "img/" + img_array[random_value] + ".gif" + ') no-repeat center center fixed',
-					'background-size':'cover',
+					'background':'url(' + "img/" + img_array[random_value] + ".gif" + ') repeat',
+					'background-size':'auto',
 			});	
 
 		function random() {
