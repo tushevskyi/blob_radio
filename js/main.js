@@ -28,7 +28,7 @@ $(function() {
 	(function first_slider() {
 
 		// let img_array 		  = [16,21,22,26,28,32,19,3,36,37],
-		let img_array = [39];
+		let img_array = [1];
 			$body 	  		  = $('body'),	
 			random_value 	  = 0;
 
@@ -71,12 +71,11 @@ $(function() {
 
 });
 
-
 const info = document.getElementById('info');
 
 function onYouTubePlayerAPIReady() {
 	const player = new YT.Player('player', {
-    	videoId: 'Hy8kmNEo1i8', // this is the id of the video at youtube (the stuff after "?v=") 
+    	videoId: 'm_piwDkjWEw', // this is the id of the video at youtube (the stuff after "?v=") 
     	events: {
         	onReady: function (e) {
             	console.log('video is loaded');
